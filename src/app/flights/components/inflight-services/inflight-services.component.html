@@ -1,0 +1,40 @@
+<app-top-right-side></app-top-right-side>
+<app-top-side [headerLabel]="headerLabel" [bdcrumbsLabel]="bdcrumbsLabel" [showInflights]="showInflights"
+    [iconLabel]="iconLabel"></app-top-side>
+<div id="mainContainer">
+    <app-left-side></app-left-side>
+    <div id="mainMargin">
+        <div id="main">
+            <div id="cards" class="cards" #cards>
+                    <mat-card class="card" *ngFor="let inflightService of InflightServices"  (click)="cardClicked(inflightService.title,cards)" [matElevation]="clicked" >
+                        <span class="close" *ngIf="inflightService.title===clickedTitle" (click)="close()">&times;</span>
+                        <mat-card-header>
+                            <mat-card-title>{{inflightService.title}}</mat-card-title>
+                        </mat-card-header>
+                        <video width="100%" *ngIf="inflightService.title==='Sit back and enjoy'" muted playsinline
+                            autoplay preload="auto" controls>
+                            <source src="../../../../assets/imgs/Sit back and enjoy.mp4" type="video/mp4"></video>
+                        <video width="100%" *ngIf="inflightService.title==='Emirates Business Class'" muted playsinline
+                            autoplay preload="auto" controls>
+                            <source src="../../../../assets/imgs/Emirates Business Class.mp4" type="video/mp4"></video>
+                        <img *ngIf="inflightService.title!=='Sit back and enjoy' && inflightService.title!=='Emirates Business Class'"
+                            mat-card-image src="../../../../assets/imgs/{{inflightService.title}}.jpg"
+                            alt="Photo of a Shiba Inu">
+                        <mat-card-content>
+                            <div >
+                                <div>
+                                    {{inflightService.description}}
+                                </div>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+            </div>
+            <div id="view">
+                <button mat-raised-button color="primary" (click)="backToTheFlightDetails()">
+                    <mat-icon>chevron_left</mat-icon> {{'DetailsPage.inflightBack.button' | translate }}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-bot-side></app-bot-side>

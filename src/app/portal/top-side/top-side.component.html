@@ -1,0 +1,51 @@
+<div id="head">
+    <!-- <img alt="Return to Home Page" src="../../../assets/imgs/ajax-wait.gif"> -->
+    <div id="topside">
+        <div id="headToolbar">
+            <mat-toolbar color="primary">
+                <span>
+                    <p>
+                        <mat-icon class="leftIcon">flight</mat-icon>MyFlight-App
+                    </p>
+                </span>
+            </mat-toolbar>
+            <div id="titbar">
+                <h2>
+                    <mat-icon class="leftIcon">{{iconLabel}}</mat-icon>{{headerLabel|translate}}
+                </h2>     
+            </div>
+        </div>    
+        <div id="bdcrumbs">
+            <p *ngIf="show">
+                <a href="/flights/search">{{'bdcrumbs.home.label' | translate }}</a>
+                &gt; <a href="/flights/search"> {{bdcrumbsLabel | translate }}</a> &gt;
+                {{bdcrumbsResultLabel | translate }}
+            </p>
+            <p *ngIf="!show && !showDetails && !showSynthesis && !showBookmark && !showInflights">
+                <a href="/flights/search">{{'bdcrumbs.home.label' | translate }}</a>
+                &gt; {{bdcrumbsLabel | translate }}
+            </p>
+            <p *ngIf="showDetails">
+                <a href="/flights/search">{{'bdcrumbs.home.label' | translate }}</a>
+                &gt; <a href="/flights/search">{{bdcrumbsLabel | translate }}</a> &gt; <a
+                    (click)="goToSearchResult()">{{bdcrumbsResultLabel | translate }}</a>
+                &gt; {{bdcrumbsDetailsLabel | translate }}
+            </p>
+            <p *ngIf="showInflights">
+                <a href="/flights/search">{{'bdcrumbs.home.label' | translate }}</a>
+                &gt; <a href="/flights/search">{{bdcrumbsLabel | translate }}</a> &gt; <a
+                    (click)="goToSearchResult()">{{bdcrumbsResultLabel | translate }}</a>
+                &gt; <a (click)="backToTheFlightDetails()">{{bdcrumbsDetailsLabel | translate }}</a>
+                &gt; {{bdcrumbsInflightLabel | translate }}
+            </p>
+            <p *ngIf="showSynthesis">
+                <a href="/flights/search">{{'bdcrumbs.home.label' | translate }}</a>
+                &gt; {{bdcrumbsLabel | translate }}
+            </p>
+            <p *ngIf="showBookmark">
+                <a href="/flights/search">{{'bdcrumbs.home.label' | translate }}</a>
+                &gt; {{bdcrumbsLabel | translate }}
+            </p>
+        </div>
+    </div>
+</div>

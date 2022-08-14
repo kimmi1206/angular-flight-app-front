@@ -1,0 +1,173 @@
+{
+    "searchFlightForm": {
+        "header.label": "Search flights",
+        "Filter.label": "Filter search result",
+        "company": {
+            "AIRFRANCE": "Air France",
+            "AIRARABIA": "Air Arabia",
+            "EMIRATES": "Emirates",
+            "QATARAIRWAYS": "Qatar Airways"
+        },
+        "trip": {
+            "ONEWAYTICKET": "One-Way ticket",
+            "ROUNDTRIP": "Round trip"
+        },
+        "flightType": {
+            "DIRECT": "Direct flight",
+            "CONNECTING": "Connecting flight"
+        },
+        "companyName.label": "Company",
+        "tripType.label": "Trip",
+        "flight.label": "Flight type",
+        "aircraft.label": "Aircraft Type",
+        "departingFrom.label": "Departing from",
+        "arrivingAt.label": "Arriving at",
+        "deparDateMin.label": "Departing date min",
+        "deparDateMax.label": "Departing date max",
+        "deparTimeMin.label": "Departing time min",
+        "deparTimeMax.label": "Departing time max",
+        "arrivDateMin.label": "Arriving date min",
+        "arrivDateMax.label": "Arriving date max",
+        "arrivTimeMin.label": "Arriving time min",
+        "arrivTimeMax.label": "Arriving time max",
+        "flightDurMin.label": "Flight duration min",
+        "flightDurMax.label": "Flight duration max",
+        "farMin.label": "Fare min",
+        "farMax.label": "Fare max",
+        "backDateMin.label": "Back date min",
+        "backDateMax.label": "Back date max",
+        "backTimeMin.label": "Back time min",
+        "backTimeMax.label": "Back time max",
+        "connectDurMin.label": "Connection duration min",
+        "connectDurMax.label": "Connection duration max",
+        "searchButton.label": "Find a flight",
+        "cancelButton.label": "Cancel",
+        "synthesisButton.label": "Synthesis"
+    },
+    "flightsList": {
+        "company.label": "Company",
+        "trip.label": "Trip",
+        "flight.label": "Flight type",
+        "departingFrom.label": "Departure location",
+        "arrivingAt.label": "Arrival location",
+        "deparDate.label": "Departure date",
+        "deparTime.label": "Departure time",
+        "arrivDate.label": "Arrival date",
+        "arrivTime.label": "Arrival time",
+        "backDate.label": "Back date",
+        "backTime.label": "Back time",
+        "detail.label": "Details",
+        "searchResult.label": "Search result",
+        "remontedResult.label": "Remonted result",
+        "listManag.label": "Flights List Management",
+        "export.label": "Export CSV",
+        "bookmark.label": "Add to Bookmarks",
+        "select.label": "Selected Flights",
+        "backList.label": "Back to the result list",
+        "flightNb.label": "Flight number",
+        "aircraft.label": "Aircraft type",
+        "connection.label": "Connection time",
+        "flightDuration.label": "Flight duration",
+        "addBook.label": "Add to bookmarks",
+        "book.title": "Title",
+        "addBook.button": "Add",
+        "cancel.button": "Cancel"
+    },
+    "bookmarkList": {
+        "header": "Bookmarks list",
+        "title": "Title",
+        "addingDate": "Adding date",
+        "nbFlights": "Number of flights",
+        "view": "View"
+    },
+    "DetailsPage": {
+        "action.header": "Actions",
+        "flight.header": "Flights informations",
+        "cabin.header": "Cabin details",
+        "inflight.header": "Inflights services",
+        "inflight.button": "View inflights services",
+        "inflightBack.button": "Back to the flight details",
+        "back.button": "Back to the result list",
+        "previous.button": "Previous",
+        "next.button": "Next",
+        "ECONOMYSTANDARD": "Economy Standard",
+        "ECONOMYLIGHT": "Economy Light",
+        "ECONOMYFLEX": "Economy Flex",
+        "BUSINESS": "Business"
+    },
+    "headers": {
+        "home.label": "Search flights",
+        "bookmarks.label": "Saved searches",
+        "synthesis.label": "Synthesis",
+        "details.label": "Details",
+        "inflight.label": "Inflight services"
+    },
+    "bdcrumbs": {
+        "home.label": "Home",
+        "synthesis.label": "Synthesis",
+        "bookmarks.label": "Saved searches",
+        "search.label": "Search flights",
+        "searchResult.label": "Search result",
+        "details.label": "Details",
+        "inflight.label": "Inflight services"
+    },
+    "menu": {
+        "home.label": "Home",
+        "flights.label": "Flights",
+        "bookmarks.label": "Bookmarks",
+        "synthesis.label": "Synthesis",
+        "contact.label": "Contact",
+        "help.label": "Help",
+        "logout.label": "Sign out"
+    },
+    "synthesisPage": {
+        "synthesis.header": "Synthesis",
+        "flightSynthesis.header": "Flights synthesis",
+        "companieSynthesis.header": "Companies synthesis",
+        "tripSynthesis.header": "Trip synthesis"
+    },
+    "lang": {
+        "lang.label": "Language",
+        "english.label": "English",
+        "french.label": "French"
+    },
+    "contrast": {
+        "high.label": "High contrast",
+        "normal.label": "Normal contrast"
+    },
+    "csvExport": {
+        "filename.label": "Flights list"
+    },
+    "authPage": {
+        "signin.label": "Sign in",
+        "username.label": "Username *",
+        "password.label": "Password *",
+        "cancel.label": "Cancel",
+        "askaccount.label": "Do not have an account yet ?",
+        "createaccount.label": "Create one!",
+        "askforgot.label": "Forgot your password ?",
+        "usernamevalid.label": "Username is required",
+        "passwordvalid.label": "Password is required",
+        "emptyfield.label": "Please fill in the required fields",
+        "incorrectfield.label": "The username or password is incorrect",
+        "signup.label": "Sign up",
+        "emailvalid.label": "Email is not valid",
+        "emailrequired.label": "Email is required",
+        "emailcritere.label": "Numbers, lowercase letters, uppercase letters, or special characters.",
+        "passcritere.label": "Password must be at least 8 characters",
+        "confpass.label": "Confirm password *",
+        "confpassvalid.label": "Password confirmation is required",
+        "passmatch.label": "Passwords must match",
+        "terms.label": "Accept Terms & Conditions",
+        "termsvalid.label": "Accept Ts & Cs is required",
+        "usernameexist.label": "Username already exists !",
+        "emailexist.label": "Email already exists !",
+        "askhaveaccount.label": "Already have an account ?",
+        "forgotpass.title": "Forgot Password",
+        "emailsend.title": "Enter your e-mail address and we'll send you a link to reset your password.",
+        "send.title": "Send"
+    },
+    "errorMessage":{
+        "emptyData.label":"No Flights available"
+    }
+}

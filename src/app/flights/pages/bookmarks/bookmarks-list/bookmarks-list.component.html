@@ -1,0 +1,83 @@
+<div *ngIf="loading" id="loader">
+  <img alt="Return to Home Page" src="../../../assets/imgs/ajax-wait.gif">
+</div>
+  <div [ngStyle]="{'display':loading ? 'none':'inherit'}" class="paginator">
+    <mat-paginator #paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+  <div [ngStyle]="{'display':loading ? 'none':'inherit'}" class="mat-elevation-z8" id="flights" [@listAnimation]="bookmarks.data.length">
+    <table mat-table [dataSource]="bookmarks" matSort>
+
+      <!-- idFlight Column -->
+      <ng-container matColumnDef="idBookmark">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th>
+        <td mat-cell *matCellDef="let bookmark"> {{bookmark.idBookmark}} </td>
+      </ng-container>  
+  
+      <!-- companyName Column -->
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>{{'bookmarkList.title' | translate }}</th>
+        <td mat-cell *matCellDef="let bookmark"> {{ bookmark.title}} </td>
+      </ng-container>
+
+      <!-- flightType Column -->
+      <ng-container matColumnDef="addingDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>{{'bookmarkList.addingDate' | translate }}</th>
+        <td mat-cell *matCellDef="let bookmark">{{bookmark.addingDate}} </td>
+      </ng-container>
+
+      <!-- travelType Column -->
+      <ng-container matColumnDef="nbFlights">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>{{'bookmarkList.nbFlights' | translate }}</th>
+        <td mat-cell *matCellDef="let bookmark"> {{bookmark.nbFlights}} </td>
+      </ng-container>
+
+      <!-- Colonne select -->
+      <ng-container matColumnDef="view">
+        <th mat-header-cell *matHeaderCellDef>{{'bookmarkList.view' | translate }}</th>
+        <td mat-cell *matCellDef="let bookmark">
+          <div id="details">
+            <a>
+              <mat-icon (click)="viewBookmark(bookmark.idBookmark)">assignment</mat-icon>
+            </a>
+            <a>
+              <mat-icon (click)="openDialogWithRef(delBookmark)">delete</mat-icon>
+            </a>
+          </div>
+          <ng-template #delBookmark>
+            <h2 matDialogTitle>Delete bookmark</h2>
+            <mat-icon>help</mat-icon><mat-label> Are you sure you want to delete this bookmark ?</mat-label>
+            <mat-dialog-actions align="end">
+              <button mat-button matDialogClose class="btnDialog" (click)="deleteBookmark(bookmark)">Yes</button>
+              <button mat-button matDialogClose class="btnDialog">{{'flightsList.cancel.button' | translate }}</button>
+            </mat-dialog-actions>
+          </ng-template> 
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <div *ngIf="!loading" id="mainBanner">
+    <h3>Bookmarks List Management</h3>
+  </div>
+  <div *ngIf="!loading" id="buttonListBar">
+    <p class="firstLeft">
+      <button mat-raised-button>
+        <mat-icon>insert_drive_file</mat-icon> {{'flightsList.export.label' | translate }}
+      </button>
+    </p>
+    <p class="firstRight">
+      <button mat-raised-button (click)="openDialogWithRef(delAllBookmark)">
+        <mat-icon>delete_sweep</mat-icon> Delete all
+      </button>
+    </p>
+  </div>
+  <ng-template #delAllBookmark>
+    <h2 matDialogTitle>Delete All bookmarks</h2>
+    <mat-icon>help</mat-icon><mat-label> Are you sure you want to delete all bookmarks ?</mat-label>
+    <mat-dialog-actions align="end">
+      <button mat-button matDialogClose class="btnDialog" (click)="deleteAllBookmark()">Yes</button>
+      <button mat-button matDialogClose class="btnDialog">{{'flightsList.cancel.button' | translate }}</button>
+    </mat-dialog-actions>
+  </ng-template> 
+ 

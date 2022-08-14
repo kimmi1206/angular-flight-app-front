@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-title>{{'authPage.signin.label' | translate }}</mat-card-title>
+    <mat-card-content>
+        <div [formGroup]="loginForm">
+            <p>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="{{'authPage.username.label' | translate }}" formControlName="username"
+                        [errorStateMatcher]="matcher">
+                    <mat-error *ngIf="username.hasError('required')">{{'authPage.usernamevalid.label' | translate }}</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <input type="password" matInput placeholder="{{'authPage.password.label' | translate }}" formControlName="password"
+                        [errorStateMatcher]="matcher">
+                    <mat-error *ngIf="password.hasError('required')">{{'authPage.passwordvalid.label' | translate }}</mat-error>
+                </mat-form-field>
+            </p>
+            <mat-error *ngIf="submitted && loginForm.invalid">{{'authPage.emptyfield.label' | translate }}</mat-error>
+            <mat-error *ngIf="invalid">{{'authPage.incorrectfield.label' | translate }}</mat-error>
+            <mat-error *ngIf="disabledException">Account not verified. An email was already sent to your adresse. Please confirm it before connecting.</mat-error>
+            <br>
+            <div class="button">
+                <button type="submit" mat-raised-button color="primary" (click)="login()">{{'authPage.signin.label' | translate }}</button>
+                <button mat-button (click)="cancel()">{{'authPage.cancel.label' | translate }}</button>
+            </div>
+            <br>
+            <p>
+                <label>{{'authPage.askaccount.label' | translate }}</label>
+                <button mat-button (click)="register()">{{'authPage.createaccount.label' | translate }}</button>
+            </p>
+            <p>
+                <button mat-button (click)="resetPassword()">{{'authPage.askforgot.label' | translate }}</button>
+            </p>
+        </div>
+    </mat-card-content>
+    <div *ngIf="loading" id="loader">
+        <img *ngIf="loading" alt="Return to Home Page" src="../../../assets/imgs/ajax-wait.gif">
+    </div>
+</mat-card>

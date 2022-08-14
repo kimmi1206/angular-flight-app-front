@@ -1,0 +1,43 @@
+<app-top-right-side></app-top-right-side>
+<app-top-side [show]="show" [headerLabel]="headerLabel" [iconLabel]="iconLabel" [bdcrumbsLabel]="bdcrumbsLabel"></app-top-side>
+<div id="mainContainer">
+    <app-left-side></app-left-side>
+    <div id="mainMargin">
+        <div id="main">
+            <div *ngIf="emptyData" class="t-error" id="ferror">
+                <ul>
+                    <li>{{'errorMessage.emptyData.label' | translate }}</li>
+                </ul>
+            </div>
+            <div id="mainBanner">
+                <h3 *ngIf="!show">{{'searchFlightForm.header.label' | translate }}</h3>
+                <h3 *ngIf="show">{{'searchFlightForm.Filter.label' | translate }}</h3>
+                <p>
+                    <span class="expand" (click)="changeVisibilitySearchForm()">
+                        <mat-icon *ngIf="isHiddenSearch">expand_more</mat-icon>
+                        <mat-icon *ngIf="!isHiddenSearch">expand_less</mat-icon>
+                    </span>
+                </p>
+            </div>
+            <div [ngStyle]="{'display':isHiddenSearch ? 'none':'inherit'}">
+                <app-search-form (onSearch)="searchFlights($event)" (showFlightsList)="showFlightsList($event)">
+                </app-search-form>
+            </div>
+            <div *ngIf="loading" id="loader">
+                <img alt="Return to Home Page" src="../../../assets/imgs/ajax-wait.gif">
+            </div>
+            <div *ngIf="show" id="mainBanner">
+                <h3>{{'flightsList.searchResult.label' | translate }}</h3>
+            </div>
+            <div *ngIf="show">
+                <app-flight-search-summary [remontedResult]="remontedResult" *ngIf="!loading">
+                </app-flight-search-summary>
+            </div>
+            <div *ngIf="show">
+                <app-flights-list *ngIf="!loading" [flights]="flightsData" (bookmarkTitle)="addBookmark($event)">
+                </app-flights-list>
+            </div>
+        </div>
+    </div>
+</div>
+<app-bot-side></app-bot-side>

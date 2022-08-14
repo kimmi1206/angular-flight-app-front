@@ -1,0 +1,22 @@
+<app-top-right-side></app-top-right-side>
+<app-top-side [headerLabel]="headerLabel" [bdcrumbsLabel]="bdcrumbsLabel"
+     [showDetails]="showDetails" [iconLabel]="iconLabel"></app-top-side>
+<div id="mainContainer">
+    <app-left-side></app-left-side>
+    <div id="mainMargin">
+        <div id="main">
+            <app-action-bloc [flightAction]="flightDetails"></app-action-bloc>
+            <app-flight-infos [flightInfos]="flightDetails"></app-flight-infos>
+            <app-cabin-details [flightInfos]="flightDetails"></app-cabin-details>
+            <div id="mainBanner">
+                <h3>{{'DetailsPage.inflight.header' | translate }}</h3>
+            </div>
+            <div id="view">
+                <button mat-raised-button color="primary" (click)="viewInflightServices()">
+                    {{'DetailsPage.inflight.button' | translate }} <mat-icon>chevron_right</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-bot-side></app-bot-side>

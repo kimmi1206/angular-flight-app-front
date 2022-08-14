@@ -1,0 +1,34 @@
+<div id="loginHeader">
+    <mat-toolbar color="primary">
+        <span>
+            <p>
+                <mat-icon class="leftIcon">flight</mat-icon> MyFlight-App
+            </p>
+        </span>
+        <div class="rightLang">
+            <div id="Lang" [formGroup]="language">
+                <mat-form-field>
+                    <mat-select (selectionChange)="changeLang($event.value)" formControlName="language">
+                        <mat-option *ngFor="let lang of langs" [value]="lang">
+                            {{ (lang==="fr_FR")?('lang.french.label' | translate):('lang.english.label' | translate) }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+    </mat-toolbar>
+</div>
+<div class="matcard">
+    <mat-card>
+        <mat-card-title>An error has occurred :</mat-card-title>
+        <br>
+        <mat-card-content>
+            Failed to load resource.
+            <br><br>
+            <a href='/flights/search'>
+                 Return to home
+            </a>
+        </mat-card-content>
+    </mat-card>
+</div>
+<app-bot-side></app-bot-side>

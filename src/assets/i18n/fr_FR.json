@@ -1,0 +1,174 @@
+{
+    "searchFlightForm": {
+        "header.label": "Recherche de vols",
+        "Filter.label": "Filtrer le résultat de la recherche",
+        "company": {
+            "AIRFRANCE": "Air France",
+            "AIRARABIA": "Air Arabia",
+            "EMIRATES": "Emirates",
+            "QATARAIRWAYS": "Qatar Airways"
+        },
+        "trip": {
+            "ONEWAYTICKET": "Aller simple",
+            "ROUNDTRIP": "Aller-retour"
+        },
+        "flightType": {
+            "DIRECT": "Vol direct",
+            "CONNECTING": "Vol avec correspondance"
+        },
+        "companyName.label": "Compagnie",
+        "tripType.label": "Voyage",
+        "flight.label": "Type de vol",
+        "aircraft.label": "Type d'aéronef",
+        "departingFrom.label": "Départ de",
+        "arrivingAt.label": "Arrivée à",
+        "deparDateMin.label": "Date de départ min",
+        "deparDateMax.label": "Date de départ max",
+        "deparTimeMin.label": "Heure de départ min",
+        "deparTimeMax.label": "Heure de départ max",
+        "arrivDateMin.label": "Date d'arrivée min",
+        "arrivDateMax.label": "Date d'arrivée max",
+        "arrivTimeMin.label": "Heure d'arrivée min",
+        "arrivTimeMax.label": "Heure d'arrivée max",
+        "flightDurMin.label": "Durée du voyage min",
+        "flightDurMax.label": "Durée du voyage max",
+        "farMin.label": "Tarif min",
+        "farMax.label": "Tarif max",
+        "backDateMin.label": "Date de retour min",
+        "backDateMax.label": "Date de retour max",
+        "backTimeMin.label": "Heure de retour min",
+        "backTimeMax.label": "Heure de retour max",
+        "connectDurMin.label": "Durée de connexion min",
+        "connectDurMax.label": "Durée de connexion max",
+        "searchButton.label": "Rechercher un vol",
+        "cancelButton.label": "Annuler",
+        "synthesisButton.label":"Synthèse"
+    },
+    "flightsList": {
+        "company.label": "Compagnie",
+        "trip.label": "Voyage",
+        "flight.label": "Type de vol",
+        "departingFrom.label": "Lieu de départ",
+        "arrivingAt.label": "Lieu d'arrivée",
+        "deparDate.label": "Date de départ",
+        "deparTime.label": "Heure de départ",
+        "arrivDate.label": "Date d'arrivée",
+        "arrivTime.label": "Heure d'arrivée",
+        "backDate.label": "Date de retour",
+        "backTime.label": "Heure de retour",
+        "detail.label": "Détails",
+        "searchResult.label": "Résultat de la recherche",
+        "remontedResult.label": "Résultat remonté",
+        "listManag.label": "Gestion de la liste des vols",
+        "export.label": "Exporter CSV",
+        "bookmark.label": "Ajouter aux favoris",
+        "select.label": "Vols sélectionnés",
+        "backList.label": "Retour à la liste des résultats",
+        "flightNb.label": "Numéro de vol",
+        "aircraft.label": "Type d'aéronef",
+        "connection.label": "Temps de correspondance",
+        "flightDuration.label": "Durée du voyage",
+        "addBook.label": "Ajouter aux favoris",
+        "book.title": "Titre",
+        "addBook.button": "Ajouter",
+        "cancel.button": "Annuler",
+        "synthesisButton.label":"Synthèse"
+    },
+    "bookmarkList": {
+        "header": "Liste des favoris",
+        "title": "Titre",
+        "addingDate": "Date d'ajout",
+        "nbFlights": "Nombre de vols",
+        "view": "Afficher"
+    },
+    "DetailsPage": {
+        "action.header": "Actions",
+        "flight.header": "Informations sur les vols",
+        "cabin.header": "Détails cabine",
+        "inflight.header": "Services en vol",
+        "inflight.button": "Afficher les services en vol",
+        "inflightBack.button": "Retour aux détails du vol",
+        "back.button": "Retour à la liste des résultats",
+        "previous.button": "Précédent",
+        "next.button": "Suivant",
+        "ECONOMYSTANDARD": "Economy Standard",
+        "ECONOMYLIGHT": "Economy Light",
+        "ECONOMYFLEX": "Economy Flex",
+        "BUSINESS": "Business"
+    },
+    "headers": {
+        "home.label": "Recherche de vols",
+        "bookmarks.label": "Recherches sauvegardées",
+        "synthesis.label": "Synthèse",
+        "details.label": "Détails",
+        "inflight.label": "Services en vol"
+    },
+    "bdcrumbs": {
+        "home.label": "Acceuil",
+        "synthesis.label": "Synthèse",
+        "bookmarks.label": "Recherches sauvegardées",
+        "search.label": "Recherche de vols",
+        "searchResult.label": "Résultat de la recherche",
+        "details.label": "Détails",
+        "inflight.label": "Services en vol"
+    },
+    "menu": {
+        "home.label": "Acceuil",
+        "flights.label": "Vols",
+        "bookmarks.label": "Favoris",
+        "synthesis.label": "Synthèse",
+        "contact.label": "Contact",
+        "help.label": "Aide",
+        "logout.label": "Se déconnecter"
+    },
+    "synthesisPage":{
+        "synthesis.header":"Synthèse",
+        "flightSynthesis.header":"Synthèse des vols",
+        "companieSynthesis.header":"Synthèse des campagnies",
+        "tripSynthesis.header":"Synthèse de voyage"
+    },
+    "lang":{
+        "lang.label":"Langue",
+        "english.label":"Anglais",
+        "french.label":"Français"
+    },
+    "contrast":{
+        "high.label":"Contraste élevé",
+        "normal.label":"Contraste normal"
+    },
+    "csvExport":{
+        "filename.label":"liste des vols"
+    },
+    "authPage":{
+        "signin.label":"Se connecter",
+        "username.label":"Nom d'utilisateur *",
+        "password.label":"Mot de passe *",
+        "cancel.label":"Annuler",
+        "askaccount.label":"Vous n'avez pas encore de compte ?",
+        "createaccount.label":"Créer un compte!",
+        "askforgot.label":"Mot de passe oublié ?",
+        "usernamevalid.label":"Le nom d'utilisateur est obligatoire",
+		"passwordvalid.label":"Le mot de passe est obligatoire",
+		"emptyfield.label":"Veuillez remplir les champs obligatoires",
+        "incorrectfield.label":"Le nom d'utilisateur ou le mot de passe est incorrect",
+        "signup.label": "S'inscrire",
+        "emailvalid.label": "L'Email n'est pas valide",
+        "emailrequired.label": "L'Email est obligatoire",
+        "emailcritere.label": "Chiffres, lettres minuscules, lettres majuscules ou caractères spéciaux.",
+        "passcritere.label": "Mot de passe doit être d'au moins 8 caractères",
+        "confpass.label": "Confirmez le mot de passe *",
+        "confpassvalid.label": "La confirmation du mot de passe est obligatoire",
+        "passmatch.label": "Les mots de passe doivent correspondre",
+        "terms.label": "Accepter les termes et conditions",
+        "termsvalid.label": "Accepter les termes et conditions est obligatoire",
+        "usernameexist.label": "Ce nom d'utilisateur existe déjà !",
+        "emailexist.label": "l'email existe déjà !",
+        "askhaveaccount.label": "Vous avez déjà un compte ?",
+        "forgotpass.title": "Mot de passe oublié",
+        "emailsend.title": "Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+        "send.title": "Envoyer"
+    },
+    "errorMessage":{
+        "emptyData.label":"Aucun vol disponible"
+    }
+}

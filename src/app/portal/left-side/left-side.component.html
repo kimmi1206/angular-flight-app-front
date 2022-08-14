@@ -1,0 +1,51 @@
+<div id="leftSide">
+    <div id="Lang" [formGroup]="language">
+        <mat-form-field>
+            <mat-select (selectionChange)="changeLang($event.value)" formControlName="language">
+                <mat-option *ngFor="let lang of langs" [value]="lang">
+                    {{ (lang==="fr_FR")?('lang.french.label' | translate):('lang.english.label' | translate) }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>  
+    </div>
+    <div id="menu">
+        <ul class="menu">
+            <li>
+                <a (click)="flightsPage()">
+                    <mat-icon class="leftIcon">home</mat-icon> {{'menu.home.label' | translate }}
+                </a>
+            </li>
+            <li>
+                <a (click)="flightsPage()">
+                    <mat-icon matBadge="{{remontedResult}}" matBadgeColor="accent" matBadgePosition="before"
+                        class="leftIcon">flight</mat-icon> {{'menu.flights.label' | translate }}
+                </a>
+            </li>
+            <li>
+                <a (click)="bookmarksPage()">
+                    <mat-icon class="leftIcon">bookmark</mat-icon> {{'menu.bookmarks.label' | translate }}
+                </a>
+            </li>
+            <li>
+                <a (click)="synthesisPage()">
+                    <mat-icon class="leftIcon">pie_chart</mat-icon> {{'menu.synthesis.label' | translate }}
+                </a>
+            </li>
+            <li>
+                <a (click)="contact()">
+                    <mat-icon class="leftIcon"> contacts</mat-icon> {{'menu.contact.label' | translate }}
+                </a>
+            </li>
+            <li>
+                <a>
+                    <mat-icon class="leftIcon">help</mat-icon> {{'menu.help.label' | translate }}
+                </a>
+            </li>
+            <li>
+                <a (click)="logOut()">
+                    <mat-icon class="leftIcon">power_settings_new</mat-icon> {{'menu.logout.label' | translate }}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

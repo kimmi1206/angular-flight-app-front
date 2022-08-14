@@ -1,0 +1,70 @@
+<div id="flightsInfo">
+    <div id="mainBanner">
+        <h3>
+            {{'DetailsPage.flight.header' | translate }}
+        </h3>
+        <p>
+            <span class="expand" (click)="changeVisibility()">
+                <mat-icon *ngIf="IsHidden">expand_more</mat-icon>
+                <mat-icon *ngIf="!IsHidden">expand_less</mat-icon>
+            </span>
+        </p>
+    </div>
+    <div class="t-data-grid" *ngIf="!IsHidden" [@orientAnimation]="orientation">
+        <table class="t-data-grid">
+            <tr>
+                <th>{{'flightsList.flightNb.label' | translate }}</th>
+                <th>{{'flightsList.company.label' | translate }}</th>
+                <th>{{'flightsList.flight.label' | translate }}</th>
+                <th>{{'flightsList.trip.label' | translate }}</th>
+            </tr>
+            <tr>
+                <td>
+                    {{flightInfos.idFlight}}
+                </td>
+                <td>{{ "searchFlightForm.company."+flightInfos.companyName | translate | replaceNullValue}}</td>
+                <td>
+                    {{ "searchFlightForm.flightType."+flightInfos.flightType | translate | replaceNullValue}} 
+                </td>
+                <td>{{ "searchFlightForm.trip."+flightInfos.travelType | translate | replaceNullValue}}</td>
+            </tr>
+            <tr>
+                <th>{{'flightsList.deparDate.label' | translate }}</th>
+                <th>{{'flightsList.arrivDate.label' | translate }}</th>
+                <th>{{'flightsList.backDate.label' | translate }}</th>
+                <th>{{'flightsList.departingFrom.label' | translate }}</th>
+            </tr>
+            <tr>
+                <td>
+                    {{flightInfos.departureDate | replaceNullValue | i18nDate}}<br />{{flightInfos.departureTime | replaceNullValue}}
+                </td>
+                <td>
+                    {{flightInfos.arrivalDate | replaceNullValue | i18nDate}}<br />{{flightInfos.arrivalTime | replaceNullValue}}
+                </td>
+                <td>
+                    {{flightInfos.backDate | replaceNullValue | i18nDate}}<br />{{flightInfos.backTime | replaceNullValue}}
+                </td>
+                <td>{{flightInfos.departureLocation}}</td>
+            </tr>
+
+            <tr>
+                <th>{{'flightsList.flightDuration.label' | translate }}</th>
+                <th>{{'flightsList.connection.label' | translate }}</th>
+                <th>{{'flightsList.aircraft.label' | translate }}</th>
+                <th>{{'flightsList.arrivingAt.label' | translate }}</th>
+            </tr>
+            <tr>
+                <td>
+                    {{flightInfos.flightDuration | replaceNullValue}}
+                </td>
+                <td>
+                    {{flightInfos.connectionDuration | replaceNullValue}}
+                </td>
+                <td>
+                    {{flightInfos.aircraftType | replaceNullValue}}
+                </td>
+                <td>{{flightInfos.arrivalLocation | replaceNullValue}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

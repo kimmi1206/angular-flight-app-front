@@ -1,0 +1,10 @@
+<mat-card id="regiConf">
+    <mat-card-title>{{result}}</mat-card-title>
+    <mat-card-content>
+
+    </mat-card-content>
+    <div *ngIf="loading" id="loader">
+        <img *ngIf="loading" alt="Return to Home Page" src="../../../assets/imgs/ajax-wait.gif">
+    </div>
+    <p>{{timeLeft}}</p>
+</mat-card>

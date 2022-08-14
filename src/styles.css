@@ -1,43 +1,617 @@
-/* You can add global styles to this file, and also import other style files */
-fieldset#search {
-  /* background: #f1f1f1; */
-  background-color: #f1f1f1;
-  border: 0 none;
-  width: 100%;
-  border: 1px solid #ccc;
-}
 .inline {
-  display: flex;
+display:flex;
 }
-.left {
-  display: flex;
-  float: left;
-  margin-right: 133px;
+.left{
+    display:flex;
+    float: left;
+    margin-right: 133px;
 }
-.right {
-  display: flex;
-  float: left;
+.right{
+    display:flex;
+   float: left;
+} 
+
+.rightLang{
+    display:flex;
+    margin: -9px 0px 0px 1286px;
+}
+.leftDuration{
+    display:flex;
+    float: left;
+    margin-right: 122px;
+}
+.leftFare{
+    display:flex;
+    float: left;
+    margin-right: 165px;
+    margin-left: -10px;
+}
+fieldset#search {
+    background: #F1F1F1;
+    border: 0 none;
+    width: 110.25%;
+    border-bottom: 1px solid #CCC;
 }
 
-#search #buttonBar .firstRight {
-  width: auto;
-  margin-left: 2px;
-  float: right;
-  text-align: left;
+#buttonListBar .firstLeft{
+	width:auto;
+    margin-right:2px;
+    margin-left: 3px;
+	float:left;
+	text-align:left;
+}
+
+#buttonListBar .nextLeft {
+	width:auto;
+	margin-left:20px;
+	float:left;
+	text-align:left;
+}
+
+#buttonListBar .firstRight{
+	width:auto;
+	float:right;
+    margin-left:2px;
+    margin-right: -147px;
+	text-align:left;
+}
+
+#buttonListBar .nextRight {
+	width:auto;
+	margin-right:20px;
+	float:right;
+	text-align:left;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+table {
+    width: 111.979%;
+}
+
+.leftIcon{
+    margin-right: 9px;
+}
+.menu {
+    overflow: hidden;
+    background: var(--firstColor);
+    font-size: 16px;
+    max-width: 179px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: -38px;
+  }
+
+  .menu a {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    padding-left: 15px;
+  }
+  
+  .menu a:hover {
+    background: var(--secondColor);
+  }
+
+  ul {
+    list-style-type: none;
+  }
+#Lang .mat-select{
+    width: 45%;
+}
+#Lang .mat-form-field{
+    text-align: center;
+}
+#Lang {
+    text-align: center;
+    width: 13%;
+    margin-bottom: -30px;
+    font-size: small;
+}
+
+#footer .mat-toolbar span {
+    font-family: Arial,Helvetica,Sans-serif;
+    font-size: 0.65em;
+    margin-top: 10px;
+}
+
+body {
+	display : table;   
+    width: 100%;
+    position: relative;
+}
+#footer {
+	display : table-row;
+    width: 100%;
+    position: absolute; bottom: 0;
+}
+
+#titbar {
+    background: var(--thirdColor);
+	padding:5px 0;
+    margin-top:2px;
+}
+
+#titbar h2{
+    font-family: Arial,Helvetica,Sans-serif;
+    padding-left: 10px;
+	margin:0;
+}
+
+#bdcrumbs {
+	clear: left;
+    font-size: 0.8em;
+    margin: -5px 0 0 6px;
+    text-align: left;
+}
+
+#bdcrumbs  p {
+	margin:5px 0 0 0;
+}
+#bdcrumbs a {text-decoration: underline;
+    color: var(--firstColor);
+    cursor: pointer;
+}
+#head {
+    display: flex;
+    margin-bottom: -22px;
+}
+
+#head img{
+    width: 9%;
+    padding-left: 18px;
+}
+#loader img{
+    width: 9%;   
+    margin:auto;
+}
+#loader{
+    text-align:center;
+}
+#topside{
+    width: 88.21%;
+    padding-top: 0px;
+    margin-left: 179px;
+}
+#tools {
+    text-align: right;
+    margin: 1px 6px -10px 0px;
+    padding-right: 20px
+}
+
+/*User box*/
+#idbox {
+    border: 1px solid #DDDDDD;
+    margin: -71px 0 19px 38px;
+    text-align: center;
+    width: 100px;
+}
+
+#idbox p {
+    font-size: 0.8em;
+    margin: 0;
+    padding: 5px;
+}
+
+#userName {
+    display: block;
+    font-weight: 500;
+    background: inherit;
+    color: var(--firstColor);
+}
+/*End User box*/
+
+#mainContainer {
+    float: left;
+    margin: 0;
+    width: 96%;
+    display: flex;
+}
+
+#mainMargin {
+	margin-left:125px;
+}
+
+#main{
+	width: 1219px;
+    float: left;
+    text-align: left;
+    margin-left: -97px;
+}
+
+#left{
+    float: left;
+    width: 100px;
+}
+  
+#mainBanner {
+    border-bottom: 2px solid #FFFFFF;
+    color: #FFFFFF;
+	float: left;
+	margin:0;
+    padding-top: 2px ;
+    width: 112%;
+}
+#mainBanner {
+    background:none no-repeat scroll left bottom var(--firstColor);
+    margin: 40px 0 0 2px;
+    height: 26.59px;
+}
+#flightsInfo #mainBanner{
+    margin: 24px 0 0 2px;
+}
+#mainBanner h3{
+    float: left;
+	margin:0;
+    font-size: 0.9em;
+    font-weight: normal;
+    padding-left: 8px;
+    text-align: left;
+    width: 50%;
+}
+#mainBanner p {
+	margin:0;
+	float:right;
+}
+#mainBanner p span  {
+    width: 28px;
+    height: 28px;
+    float: left;
+    margin: -2px 0px 0px 0px;
+    padding: 2px 0px 0px 4px;
+}
+
+.search {
+    margin-left: 66px;
+}
+.synthesisSearch {
+    margin-left: 342px;
+}
+.mat-elevation-z8{
+    box-shadow: unset;
+}
+
+.mat-table {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    border-spacing: 10px;
+    margin-left: 1.5px;
+}
+
+#flights .mat-header-cell {
+    color: #000;
+    text-decoration: underline;
+    font-weight: bold;
+    border-bottom: 1px solid #DADADA;
+    border-right: 1px solid #DADADA;
+  }
+  #flights .mat-table .mat-header-row {
+	background:url("../src/assets/imgs/thBackground.gif") repeat scroll center center #CCC;
+    height: fit-content;
+}
+ td:not(.mat-calendar-body-cell):not(.mat-calendar-body-label){
+    border-right: 1px solid
+    #DADADA;
+    font-size: 0.9em;
+    text-align: center;
+}
+#flights td{
+    line-height:0.9;
+}
+#flights .mat-cell:first-of-type, #flights .mat-header-cell:first-of-type {
+    border-left: 1px solid #DADADA;
+}
+
+#flights .mat-row:hover {
+    background-color:#F7DEBE;
+}  
+#buttonListBar button:hover{
+    background-color:#F90;
+    color: #fff;
+}
+tr:hover {
+    background-color:#F7DEBE;
+}  
+#flights tr:nth-child(even),#result tr:nth-child(even) {background:var(--fourthColor)}
+TABLE.t-data-grid TR:nth-child(even),#result tr:nth-child(even) {background:var(--fourthColor)}
+#flights .mat-cell a{
+	width:20px;
+	height:20px;
+    color: var(--firstColor);
+    cursor: pointer;
+    margin: -4px 7px 0 9px;
+}
+.mat-dialog-container .mat-icon {
+    color: var(--firstColor);
+}
+#flights .mat-cell a:hover {
+    color:  #F90;
+    cursor: pointer;
+}
+
+.mat-sort-header-container {
+    justify-content: center;
+    width: 103%;
+
+}
+
+#flights .mat-cell{
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.paginator{
+    float: left;
+ }
+
+ TABLE.t-data-grid TR th,#result th{
+    border-top: 1px solid #DADADA;
+    border-right: 1px solid #DADADA;
+    border-bottom: 1px solid #DADADA;
+background: url("../src/assets/imgs/thBackground.gif") repeat scroll center center
+#CCC; 
+font-size: 0.8em;
+text-align: center;
+}
+TABLE.t-data-grid td{
+    border-left: 1px solid #DDD;
+}
+#cabinDetails TABLE.t-data-grid td{
+    text-align: left;
+    padding: 0px 0px 0px 1.6px;
+}
+#cabinDetails TABLE.t-data-grid td div{
+    display:flex;
+}
+TABLE.t-data-grid {
+    border-collapse: collapse;
+    margin-left: 2px;
+}
+DIV.t-data-grid {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+#mainBanner p span.expand{
+    background:  #F1F1F1;
+    cursor: pointer;
+    color: var(--firstColor);
+}
+#mainBanner p span.expand:hover {
+	background:  #DDDDDD;
+}
+#mainContainer {
+    margin-bottom: 100px;
+}
+#details{
+    display: flex;
+}
+
+#search #buttonBar .firstLeft{
+	width:auto;
+	margin-right:2px;
+	float:left;
+	text-align:left;
+}
+
+#search #buttonBar .nextLeft {
+	width:auto;
+	margin-left:20px;
+	float:left;
+	text-align:left;
+}
+
+#search #buttonBar .firstRight{
+	width:auto;
+	float:right;
+	margin-left:2px;
+	text-align:left;
 }
 
 #search #buttonBar .nextRight {
-  width: auto;
-  margin-left: 20px;
-  float: right;
-  text-align: left;
+	width:auto;
+	margin-right:20px;
+	float:right;
+	text-align:left;
 }
 
-html,
-body {
-  height: 100%;
+.cards {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-flow: column;
+    grid-auto-columns: 448px;
+    position :relative;
+  }
+  .gfg { 
+    z-index: -1; 
+    opacity: 0.5; 
+    transform-style:all; 
+    transition-duration: 1s; 
+} 
+.card {
+    margin: 39px 0px 0px 0px;
+  }
+ 
+  .login {
+    display: grid;
+    grid-auto-columns: 448px;
+    margin: 55px 0 0 571px;
+    text-align: center;
 }
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+.matcard {
+    display: grid;
+    grid-auto-columns: 448px;  
+    margin: 26px 0 0 571px;
+    text-align: center;
 }
+  #view button{
+    width: auto;
+    height: 60px;
+    font-size: large;
+    font-weight: 400;
+    text-align:center;
+    margin: auto;
+    margin: 30px 0px 0px 550px;  
+  }
+#action #buttonBar .firstLeft{
+	width:auto;
+	margin-right:-15px;
+	float:left;
+    text-align:left;
+    margin-top: -20px;
+}
+#action #buttonBar  button{
+    height: 40px;
+}
+#action #buttonBar{
+    background-color: var(--fourthColor);
+    margin: 38px 0px 0px 3px;
+    padding: 48px 0px 61px 0px;
+    width: 1364px;
+    height: 37px;
+}
+#action #mainBanner{
+    margin: 0px 0 0 2px;
+}
+#action #buttonBar #firstLeft button{
+    width: 15.22%;
+    margin: -10px 0px 0px 0px;
+}
+
+#action #buttonBar .nextLeft {
+	width:auto;
+	margin-left:20px;
+	float:left;
+    text-align:left;
+    margin-top: -20px;
+}
+#action #buttonBar .firstRight{
+	width:auto;
+	float:right;
+	margin-left:2px;
+	text-align:left;
+}
+
+#action #buttonBar .nextRight {
+	width:auto;
+	margin-right:20px;
+	float:right;
+	text-align:left;
+}
+
+#tools a,
+#tools a:link,
+#tools a:visited {
+    font-size: 0.9em;
+    color: #666;
+    background: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#tools a:hover {
+    text-decoration: none;
+}
+.mat-toolbar.mat-primary {
+    background: var(--firstColor);
+    color: #fff;
+}
+.mat-raised-button.mat-primary {
+    background-color: var(--firstColor);
+}
+td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type, th.mat-header-cell:last-of-type {
+    width: 1px;
+}
+
+#login.mat-form-field {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  #login mat-card-title,
+  #login mat-card-content {
+    display: flex;
+    justify-content: center;
+  }
+  .mat-card{
+    position: relative;
+  }
+  .fullscreen{
+    position: absolute;
+    width: 200%;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 999;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  DIV.t-error DIV {
+    padding: 2px;
+    display: block;
+    margin: 0px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+DIV.t-error UL {
+    margin: 2px 0px;
+    background-color: white;
+    color: red;
+    list-style-type: none;
+}
+
+DIV.t-error LI {
+    margin-left: 20px;
+}
+ 
+#ferror {
+    clear: both;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: -28px;
+  }
+  .example-button-container {
+    justify-content: center;
+    width: 120px;
+    margin: -89px 0 17px 58px;
+  }
+  .blue-snackbar {
+    background: var(--firstColor);
+    color: white !important;
+    border-radius: 8px !important;
+    min-width: fit-content !important;
+    min-height: 20px !important;
+  }
+textarea{
+    overflow: scroll !important;
+    line-height: 3.125 !important;
+}
+ .content {
+    width: 65%;
+}
+.object {
+    width: 64.8%;
+}
+.email {
+    width: 18%;
+}
+#regiConf p {
+    font-size: x-large;
+}
+:root {
+    --firstColor: #3f51b5;
+    --secondColor: #336EFF; 
+    --thirdColor: #B2CDD7; 
+    --fourthColor:#EAF9FF;
+  } 

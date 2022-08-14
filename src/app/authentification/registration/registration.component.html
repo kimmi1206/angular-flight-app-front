@@ -1,0 +1,64 @@
+<mat-card>
+    <mat-card-title>{{'authPage.signup.label' | translate }}</mat-card-title>
+    <mat-card-content>
+        <div [formGroup]="registerForm">
+            <p>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="{{'authPage.username.label' | translate }}" [formControl]="username"
+                        [errorStateMatcher]="matcher">
+                    <mat-error *ngIf="username.hasError('required')">{{'authPage.usernamevalid.label' | translate }}</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <input type="email" matInput placeholder="Email *" [formControl]="email"
+                        [errorStateMatcher]="matcher">
+                    <mat-error *ngIf="email.hasError('email')">{{'authPage.emailvalid.label' | translate }}</mat-error>
+                    <mat-error *ngIf="email.hasError('required')">{{'authPage.emailrequired.label' | translate }}</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <input type="password" matInput placeholder="{{'authPage.password.label' | translate }}" [formControl]="password"
+                        [errorStateMatcher]="matcher">
+                    <mat-hint>{{'authPage.emailcritere.label' | translate }}</mat-hint>
+                    <mat-error *ngIf="password.hasError('required')">{{'authPage.passwordvalid.label' | translate }}</mat-error>
+                    <mat-error *ngIf="password.hasError('minlength')">{{'authPage.passcritere.label' | translate }}</mat-error>
+                    <mat-error *ngIf="password.hasError('passwordStrength')">{{password.errors['passwordStrength']}}
+                    </mat-error>
+                </mat-form-field>
+            </p>
+            <br>
+            <p>
+                <mat-form-field>
+                    <input type="password" matInput placeholder="{{'authPage.confpass.label' | translate }}" [formControl]="confpassword"
+                        [errorStateMatcher]="matcher">
+                    <mat-error *ngIf="confpassword.hasError('required')">{{'authPage.confpassvalid.label' | translate }}</mat-error>
+                    <mat-error *ngIf="confpassword.hasError('mustMatch')">{{'authPage.passmatch.label' | translate }}</mat-error>
+                </mat-form-field>
+            </p>
+            <br>
+            <p>
+                <input type="checkbox" matCheckbox [formControl]="acceptTerms">
+                <label>{{'authPage.terms.label' | translate }}</label>
+                <mat-error *ngIf="submitted && acceptTerms.errors">{{'authPage.termsvalid.label' | translate }}</mat-error>
+            </p>
+            <mat-error *ngIf="submitted && registerForm.invalid">{{'authPage.emptyfield.label' | translate }}</mat-error>
+            <mat-error *ngIf="submitted && u_username">{{'authPage.usernameexist.label' | translate }}</mat-error>
+            <mat-error *ngIf="submitted && u_email">{{'authPage.emailexist.label' | translate }}</mat-error>
+            <br>
+            <div class="button">
+                <button type="submit" mat-raised-button color="primary" (click)="register()">{{'authPage.signup.label' | translate }}</button>
+                <button mat-button (click)="cancel()">{{'authPage.cancel.label' | translate }}</button>
+            </div>
+            <br>
+            <p>
+                <label>{{'authPage.askhaveaccount.label' | translate }}</label>
+                <button mat-button (click)="login()">{{'authPage.signin.label' | translate }}</button>
+            </p>
+        </div>
+    </mat-card-content>
+    <div *ngIf="loading" id="loader">
+        <img *ngIf="loading" alt="Return to Home Page" src="../../../assets/imgs/ajax-wait.gif">
+    </div>
+</mat-card>

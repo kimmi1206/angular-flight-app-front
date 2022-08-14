@@ -1,0 +1,16 @@
+<div id="result" class="t-data-grid left" [@tableAnimation]>
+    <table class="t-data-grid">
+        <tr>
+            <th>{{'flightsList.company.label' | translate }}</th>
+            <th>{{'bookmarkList.nbFlights' | translate }}</th>
+        </tr>
+        <tr *ngFor="let synthesisCompany of synthesisCompanies">
+            <td>{{"searchFlightForm.company."+synthesisCompany.companyName | translate}}</td>
+            <td>{{synthesisCompany.nbFlights}}</td>
+        </tr>
+    </table>
+</div>
+<div class="right" style="display: block" [@pieAnimation]>
+    <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" [colors]="colors" width="600"
+        height="300"></canvas>
+</div>

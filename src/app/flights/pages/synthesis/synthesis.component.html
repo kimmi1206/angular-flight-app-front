@@ -1,0 +1,58 @@
+<app-top-right-side></app-top-right-side>
+<app-top-side [showSynthesis]="showSynthesis" [headerLabel]="headerLabel" [iconLabel]="iconLabel"
+    [bdcrumbsLabel]="bdcrumbsLabel"></app-top-side>
+<div id="mainContainer">
+    <app-left-side></app-left-side>
+    <div id="mainMargin">
+        <div id="main">
+            <div *ngIf="emptyData" class="t-error" id="ferror">
+                <ul>
+                    <li>{{'errorMessage.emptyData.label' | translate }}</li>
+                </ul>
+            </div>
+            <div id="mainBanner">
+                <h3>{{'synthesisPage.synthesis.header' | translate }}</h3>
+                <p>
+                    <span class="expand" (click)="changeVisibilitySearchForm()">
+                        <mat-icon *ngIf="isHiddenSearch">expand_more</mat-icon>
+                        <mat-icon *ngIf="!isHiddenSearch">expand_less</mat-icon>
+                    </span>
+                </p>
+            </div>
+            <div [ngStyle]="{'display':isHiddenSearch ? 'none':'inherit'}">
+                <app-synthesis-criteria (onSearch)="doSynthesis($event)"></app-synthesis-criteria>
+            </div>
+            <div id="mainBanner" *ngIf="show">
+                <h3>{{'synthesisPage.flightSynthesis.header' | translate }}</h3>
+            </div>
+            <div *ngIf="show">
+                <div *ngIf="loading1" id="loader">
+                    <img alt="Return to Home Page" src="../../../assets/imgs/ajax-wait.gif">
+                </div>
+                <app-synthesis-flights [nbFlights]="nbFlights" [synthesisCriteria]="synthesisCriteria"
+                    *ngIf="!loading1"></app-synthesis-flights>
+            </div>
+            <div id="mainBanner" *ngIf="show">
+                <h3>{{'synthesisPage.companieSynthesis.header' | translate }}</h3>
+            </div>
+            <div *ngIf="show">
+                <div *ngIf="loading" id="loader">
+                    <img alt="Return to Home Page" src="../../../assets/imgs/ajax-wait.gif">
+                </div>
+                <app-synthesis-summary [synthesisCompanies]="synthesisCompanies" *ngIf="!loading">
+                </app-synthesis-summary>
+            </div>
+            <div id="mainBanner" *ngIf="show">
+                <h3>{{'synthesisPage.tripSynthesis.header' | translate }}</h3>
+            </div>
+            <div *ngIf="show">
+                <div *ngIf="loading2" id="loader">
+                    <img alt="Return to Home Page" src="../../../assets/imgs/ajax-wait.gif">
+                </div>
+                <app-synthesis-trip [synthesisTrips]="synthesisTrips" [lang]="lang" *ngIf="!loading2">
+                </app-synthesis-trip>
+            </div>
+        </div>
+    </div>
+</div>
+<app-bot-side></app-bot-side>

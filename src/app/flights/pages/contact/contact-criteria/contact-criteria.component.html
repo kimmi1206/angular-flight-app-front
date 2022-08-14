@@ -1,0 +1,40 @@
+<div [formGroup]="contactForm" name="contactForm" id="contactForm">
+    <fieldset id="search">
+        <div class="search">
+            <div id="email">
+                <mat-form-field class="email">
+                    <mat-label>Email*</mat-label>
+                    <input matInput formControlName="adress" [errorStateMatcher]="matcher">
+                    <mat-error *ngIf="adress.hasError('email')">{{'authPage.emailvalid.label' | translate }}</mat-error>
+                    <mat-error *ngIf="adress.hasError('required')">{{'authPage.emailrequired.label' | translate }}</mat-error>
+                </mat-form-field>
+                <br><br>
+                <mat-form-field class="object">
+                    <mat-label>Object*</mat-label>
+                    <input matInput formControlName="object" [errorStateMatcher]="matcher">
+                    <mat-error *ngIf="object.hasError('required')">Object is required</mat-error>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="content">
+                    <mat-label>Message*</mat-label>
+                    <textarea matInput formControlName="content" [errorStateMatcher]="matcher"></textarea>
+                    <mat-error *ngIf="content.hasError('required')">Message is required</mat-error>
+                </mat-form-field>
+            </div>
+            <br>
+            <div *ngIf="loading" id="loader">
+                <img *ngIf="loading" alt="Return to Home Page" src="../../../assets/imgs/ajax-wait.gif">
+            </div>
+            <div id="buttonBar">
+                <p class="firstRight">
+                    <button mat-raised-button color="primary" (click)="send()">
+                        <mat-icon>email</mat-icon> Send
+                    </button>
+                </p>
+                <p class="nextRight">
+                    <button mat-raised-button>{{'searchFlightForm.cancelButton.label'| translate}}</button>
+                </p>
+            </div>
+        </div>
+    </fieldset>
+</div>

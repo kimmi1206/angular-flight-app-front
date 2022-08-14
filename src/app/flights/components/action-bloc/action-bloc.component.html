@@ -1,0 +1,29 @@
+<div id="action">
+    <div id="mainBanner">
+        <h3>{{'DetailsPage.action.header' | translate }}</h3>
+        <p>
+            <span class="expand" (click)="changeVisibility()">
+                <mat-icon *ngIf="isHidden">expand_more</mat-icon>
+                <mat-icon *ngIf="!isHidden">expand_less</mat-icon>
+            </span>
+        </p>
+    </div>
+    <div id="buttonBar" *ngIf="!isHidden">
+        <p id="firstLeft">
+            <button mat-raised-button color="primary" (click)="backToTheFlightsList()">
+                <mat-icon>fast_rewind</mat-icon> {{'DetailsPage.back.button' | translate }}
+            </button>
+        </p>
+        <p style="width: 100%; margin: 10px 0pt 0pt;">&nbsp;</p>
+        <p class="firstLeft">
+            <button [ngStyle]="{'display':hidePrevious ? 'none':'inherit'}" mat-raised-button color="primary" (click)="previousPage()">
+                <mat-icon>skip_previous</mat-icon> {{'DetailsPage.previous.button' | translate }}
+            </button>
+        </p>
+        <p class="nextLeft">
+            <button [ngStyle]="{'display':hideNext ? 'none':'inherit'}" mat-raised-button color="primary" (click)="nextPage()">
+                <mat-icon>skip_next</mat-icon> {{'DetailsPage.next.button' | translate }}
+            </button>
+        </p>
+    </div>
+</div>

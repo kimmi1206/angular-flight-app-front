@@ -1,0 +1,36 @@
+<div [formGroup]="synthesisForm" name="synthesisForm" id="synthesisForm">
+    <fieldset id="search">
+        <div class="search">
+            <div class="inline">
+                <div class="left">
+                    <div class="left">
+                        <mat-form-field>
+                            <mat-label>{{'searchFlightForm.deparDateMin.label' | translate }}</mat-label>
+                            <input matInput [matDatepicker]="picker" formControlName="departureDateMin">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="right">
+                        <mat-form-field>
+                            <mat-label>{{'searchFlightForm.deparDateMax.label' | translate }}</mat-label>
+                            <input matInput [matDatepicker]="picker1" formControlName="departureDateMax">
+                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker #picker1></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div id="buttonBar">
+                <p class="firstRight">
+                    <button mat-raised-button color="primary" (click)="doSynthesis()">
+                        <mat-icon>pie_chart</mat-icon> {{'searchFlightForm.synthesisButton.label'| translate}}
+                    </button>
+                </p>
+                <p class="nextRight">
+                    <button mat-raised-button>{{'searchFlightForm.cancelButton.label'| translate}}</button>
+                </p>
+            </div>
+        </div>
+    </fieldset>
+</div>
